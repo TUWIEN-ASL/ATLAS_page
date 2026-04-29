@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="ATLAS: An Annotation Tool for Long-horizon Robotic Action Segmentation" />
+  <meta property="og:url" content="https://tuwien-asl.github.io/ATLAS_page/" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <title>ATLAS: An Annotation Tool for Long-horizon Robotic Action Segmentation</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+        <a class="navbar-item" href="https://tuwien-asl.github.io">
+          <span class="icon">
+            <i class="fas fa-home"></i>
+          </span>
+          <span>More Research</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== TITLE ===== -->
+  <section class="publication-header">
+    <div class="hero-body">
+      <div class="container is-max-widescreen">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">ATLAS: An Annotation Tool for Long-horizon Robotic Action Segmentation</h1>
+          <div class="is-size-3 publication-authors" style="margin-top: 0.5rem;">
+            2026 IEEE International Symposium on Robot and Human Interactive Communication (ARSO)
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== AUTHORS ===== -->
+  <section class="publication-author-block">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                Sergej Stanovcic<sup>1,*</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://dsliwowski1.github.io/" target="_blank">Daniel Sliwowski</a><sup>1,*</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://www.tuwien.at/etit/ict/asl/team/dongheui-lee" target="_blank">Dongheui Lee</a><sup>1,2</sup>
+              </span>
+            </div>
+
+            <div class="is-size-6 publication-authors" style="margin-top: 0.2rem; color: #777;">
+              <span><sup>*</sup>equal contributions</span>
+            </div>
+
+            <div class="is-size-5 publication-authors" style="margin-top: 0.4rem;">
+              <span class="author-block"><sup>1</sup>Technische Universität Wien (TU Wien)</span>&nbsp;&nbsp;
+              <span class="author-block"><sup>2</sup>German Aerospace Center (DLR)</span>
+            </div>
+
+            <div class="column has-text-centered" style="margin-top: 1rem;">
+              <div class="publication-links">
+
+                <!-- arXiv -->
+                <span class="link-block">
+                  <a href="#" target="_blank" class="external-link button is-normal is-rounded">
+                    <span class="icon"><i class="ai ai-arxiv"></i></span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+
+                <!-- Paper PDF -->
+                <span class="link-block">
+                  <a href="#" target="_blank" class="external-link button is-normal is-rounded">
+                    <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+
+                <!-- GitHub -->
+                <span class="link-block">
+                  <a href="https://github.com/TUWIEN-ASL/ATLAS-tuwienasl" target="_blank" class="external-link button is-normal is-rounded">
+                    <span class="icon"><i class="fab fa-github"></i></span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                <!-- Documentation -->
+                <span class="link-block">
+                  <a href="https://atlas-tuwienasl.readthedocs.io/en/latest/" target="_blank" class="external-link button is-normal is-rounded">
+                    <span class="icon"><i class="fas fa-book"></i></span>
+                    <span>Documentation</span>
+                  </a>
+                </span>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TEASER FIGURE ===== -->
+  <section class="section">
+    <div class="container is-max-widescreen">
+      <div class="hero-body">
+        <div class="column is-centered has-text-centered">
+          <img src="public/figures/teaser-1.png" alt="ATLAS Overview" style="max-width: 860px; width: 100%;" />
+          <p class="is-size-6" style="margin-top: 0.8rem; color: #555;">
+            <strong>Fig. 1:</strong> ATLAS is a tool for long-horizon robotic action segmentation, supporting
+            time-synchronized visualization of multi-modal data. It handles common robotics dataset formats and can be
+            extended to new ones. The tool allows annotation of action boundaries, classes, and outcomes (success or failure).
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABSTRACT ===== -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Annotating long-horizon robotic demonstrations with precise temporal action boundaries is crucial for
+              training and evaluating action segmentation and manipulation policy learning methods. Existing annotation
+              tools, however, are often limited: they are designed primarily for vision-only data, do not natively
+              support synchronized visualization of robot-specific time-series signals (e.g., gripper state or
+              force/torque), or require substantial effort to adapt to different dataset formats. In this paper, we
+              introduce <strong>ATLAS</strong>, an annotation tool tailored for long-horizon robotic action
+              segmentation. ATLAS provides time-synchronized visualization of multi-modal robotic data, including
+              multi-view video and proprioceptive signals, and supports annotation of action boundaries, action labels,
+              and task outcomes. The tool natively handles widely used robotics dataset formats such as ROS bags and
+              the Reinforcement Learning Dataset (RLDS) format, and provides direct support for specific datasets such
+              as REASSEMBLE. ATLAS can be easily extended to new formats via a modular dataset abstraction layer. Its
+              keyboard-centric interface minimizes annotation effort and improves efficiency. In experiments on a
+              contact-rich assembly task, ATLAS reduced the average per-action annotation time by at least
+              <strong>6%</strong> compared to ELAN, while the inclusion of time-series data improved temporal
+              alignment with expert annotations by more than <strong>2.8%</strong> and decreased boundary error
+              <strong>fivefold</strong> compared to vision-only annotation tools.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTRIBUTIONS ===== -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column">
+          <h2 class="title is-2">Contributions</h2>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="content">
+        <ul class="contribution-list">
+          <li>
+            <strong>Synchronized multi-modal visualization</strong> — time-synchronized display of multi-view RGB
+            video streams and robot-specific time-series signals (end-effector pose, gripper state, force/torque)
+            for precise boundary identification.
+          </li>
+          <li>
+            <strong>Flexible dataset support</strong> — native handling of raw videos, frame-based datasets, ROS
+            bag files (ROS1 &amp; ROS2), the RLDS format (covering 71 datasets and 2.4M+ episodes in the Open
+            X-Embodiment repository), and the REASSEMBLE dataset — no conversion required.
+          </li>
+          <li>
+            <strong>Extensible dataset abstraction</strong> — a template-method design pattern decouples the
+            visualization and annotation frontend from the underlying data format, allowing new datasets to be
+            integrated with minimal effort.
+          </li>
+          <li>
+            <strong>Keyboard-centric annotation interface</strong> — customizable shortcuts reduce mouse
+            interaction overhead, achieving the lowest average per-action annotation time among compared tools
+            (11.0 ± 1.2 s for vision-only, 18.5 ± 0.9 s with time-series data).
+          </li>
+          <li>
+            <strong>Action segmentation and outcome annotation</strong> — support for marking action boundaries,
+            assigning semantic action labels, and recording task outcomes (success or failure).
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TOOL OVERVIEW ===== -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column">
+          <h2 class="title is-2">Tool Overview</h2>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interface Layout -->
+  <section class="section">
+    <div class="container is-max-widescreen">
+      <div class="rows">
+        <div class="rows is-centered">
+          <div class="row is-full-width">
+            <h2 class="title is-3">Interface &amp; Annotation Workflow</h2>
+          </div>
+          <div class="columns" style="align-items: center;">
+            <div class="column">
+              <span class="method-text">
+                <br>
+                The ATLAS interface is organized into five vertically stacked sections:
+                <ol style="margin-top: 0.5rem; font-size: 100%;">
+                  <li><strong>Multi-view camera panel</strong> — simultaneous display of all configured camera streams.</li>
+                  <li><strong>Data Selector</strong> — scrollable menu to choose which time-series signals to visualize.</li>
+                  <li><strong>Time-series plots</strong> — interactive PyQtGraph panels with zoom and axis adjustment.</li>
+                  <li><strong>Timeline &amp; Annotation Panel</strong> — scrub through the episode; view and edit all action segments, their labels, and success/failure flags.</li>
+                  <li><strong>Control buttons</strong> — keyboard shortcut–driven controls for starting/ending segments and navigating the episode at two configurable speeds.</li>
+                </ol>
+                <br>
+                Annotation begins by pressing <em>Start Action</em>; after navigating to the boundary, pressing the
+                same key again opens a label dialog. The annotated segment is instantly added to the panel.
+              </span>
+            </div>
+            <div class="column has-text-centered">
+              <img src="public/figures/gui-1.png" alt="ATLAS Interface" style="width: 100%; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Action Dialog -->
+  <section class="section">
+    <div class="container is-max-widescreen">
+      <div class="rows">
+        <div class="rows is-centered">
+          <div class="row is-full-width">
+            <h2 class="title is-3">Action Label Dialog &amp; Code Architecture</h2>
+          </div>
+          <div class="columns" style="align-items: center;">
+            <div class="column has-text-centered">
+              <img src="public/figures/action_dialog.png" alt="Action Label Dialog" style="max-width: 280px; width: 100%; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);" />
+              <p class="is-size-6" style="margin-top: 0.5rem; color: #555;">
+                Action dialog: select a label by pressing its number and toggle the success flag before confirming.
+              </p>
+            </div>
+            <div class="column has-text-centered">
+              <img src="public/figures/code_structure.png" alt="ATLAS Code Structure" style="max-width: 340px; width: 100%;" />
+              <p class="is-size-6" style="margin-top: 0.5rem; color: #555;">
+                Code structure: <code>datasets/</code> houses format-specific handlers inheriting from
+                <code>DatasetBase</code>; <code>gui.py</code> implements the PyQt5 frontend.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dataset Support -->
+  <section class="section">
+    <div class="container is-max-widescreen">
+      <div class="rows">
+        <div class="rows is-centered">
+          <div class="row is-full-width">
+            <h2 class="title is-3">Supported Dataset Formats</h2>
+          </div>
+          <span class="method-text">
+            ATLAS uses a <em>template method</em> design pattern: an abstract <code>DatasetBase</code> class defines
+            a common API for episode retrieval and I/O. Specialized subclasses implement it for each format.
+            New formats can be added by creating a single Python file in the <code>datasets/</code> folder.
+          </span>
+          <br><br>
+          <div class="table-container" style="overflow-x: auto; max-width: 860px; margin: 0 auto;">
+            <table class="results-table">
+              <thead>
+                <tr>
+                  <th>Format</th>
+                  <th>Time-series Visualization</th>
+                  <th>Temporal Segmentation Annotation</th>
+                  <th>Notes</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Raw Videos (.mp4, .avi, .mkv)</td>
+                  <td>—</td>
+                  <td class="best">✓</td>
+                  <td>Auto-detects single-file, flat-dir, multi-camera layouts</td>
+                </tr>
+                <tr>
+                  <td>Frame-based datasets</td>
+                  <td>—</td>
+                  <td class="best">✓</td>
+                  <td>Same layout detection as Video handler</td>
+                </tr>
+                <tr>
+                  <td>ROS Bags (ROS1 &amp; ROS2)</td>
+                  <td class="best">✓</td>
+                  <td class="best">✓</td>
+                  <td>No ROS installation required; parses JointState, WrenchStamped, PoseStamped, …</td>
+                </tr>
+                <tr>
+                  <td>RLDS (TF Datasets)</td>
+                  <td class="best">✓</td>
+                  <td class="best">✓</td>
+                  <td>Covers all 71 datasets / 2.4M episodes in Open X-Embodiment</td>
+                </tr>
+                <tr>
+                  <td>REASSEMBLE (HDF5)</td>
+                  <td class="best">✓</td>
+                  <td class="best">✓</td>
+                  <td>Background ring-buffer pre-loading for low I/O latency</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== COMPARISON ===== -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column">
+          <h2 class="title is-2">Comparison with Existing Tools</h2>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-widescreen">
+      <div class="rows">
+        <div class="rows is-centered">
+          <!-- <div class="row is-full-width">
+            <h2 class="title is-3">Feature Comparison</h2>
+          </div> -->
+          <div class="table-container" style="overflow-x: auto; max-width: 860px; margin: 0 auto;">
+            <table class="results-table">
+              <thead>
+                <tr>
+                  <th>Tool</th>
+                  <th>Domain</th>
+                  <th>Time-series Visualization</th>
+                  <th>Temporal Segmentation Annotation</th>
+                  <th>Supported Formats</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>CVAT</td>
+                  <td>Computer Vision</td>
+                  <td>✗</td>
+                  <td>✗</td>
+                  <td>Frames, Videos</td>
+                </tr>
+                <tr>
+                  <td>Foxglove Studio</td>
+                  <td>Robotics</td>
+                  <td>✓</td>
+                  <td>✗</td>
+                  <td>MCAP, ROS Bags</td>
+                </tr>
+                <tr>
+                  <td>ROSAnnotator</td>
+                  <td>Robotics</td>
+                  <td>✗ <sup>†</sup></td>
+                  <td>✓</td>
+                  <td>ROS Bags</td>
+                </tr>
+                <tr>
+                  <td>Anvil</td>
+                  <td>Behavioral</td>
+                  <td>✓</td>
+                  <td>✓</td>
+                  <td>Videos, Motion Capture</td>
+                </tr>
+                <tr>
+                  <td>ELAN</td>
+                  <td>Linguistics</td>
+                  <td>✓</td>
+                  <td>✓</td>
+                  <td>Videos, CSV files</td>
+                </tr>
+                <tr class="separator">
+                  <td><strong>ATLAS (ours)</strong></td>
+                  <td><strong>Robotics</strong></td>
+                  <td class="best">✓</td>
+                  <td class="best">✓</td>
+                  <td><strong>Frames, Videos, ROS Bags, RLDS, REASSEMBLE</strong></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="is-size-6" style="color: #555; margin-top: 0.5rem; text-align: center;">
+            <sup>†</sup> Authors provide modification guidelines but this functionality is not available by default.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EXPERIMENTS ===== -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column">
+          <h2 class="title is-2">Experiments</h2>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-widescreen">
+      <div class="rows">
+        <div class="rows is-centered">
+          <div class="row is-full-width">
+            <h2 class="title is-3">Annotation Efficiency &amp; Quality</h2>
+          </div>
+          <span class="method-text">
+            We recorded four long-horizon demonstrations of a gear assembly task (NIST assembly task board) with
+            three camera views and proprioceptive data. Twelve annotators were each assigned to one of four
+            conditions: ROSAnnotator, ELAN, ATLAS (vision-only), or ATLAS (vision + time-series). Expert
+            annotations from two specialists (inter-annotator agreement 99.6%, boundary distance 0.033 s)
+            served as ground truth.
+          </span>
+          <br><br>
+          <div class="table-container" style="overflow-x: auto; max-width: 820px; margin: 0 auto;">
+            <table class="results-table">
+              <thead>
+                <tr>
+                  <th>Condition</th>
+                  <th>Avg. per-action time (s)</th>
+                  <th>Alignment score (%)</th>
+                  <th>Avg. boundary distance (s)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>ROSAnnotator</td>
+                  <td>26.9 ± 6.1</td>
+                  <td>85.1 ± 2.3</td>
+                  <td>1.59 ± 0.25</td>
+                </tr>
+                <tr>
+                  <td>ELAN</td>
+                  <td>19.7 ± 1.1</td>
+                  <td>96.7 ± 0.8</td>
+                  <td>0.35 ± 0.08</td>
+                </tr>
+                <tr>
+                  <td>ATLAS (vision-only)</td>
+                  <td class="best">11.0 ± 1.2</td>
+                  <td>97.0 ± 1.4</td>
+                  <td>0.31 ± 0.15</td>
+                </tr>
+                <tr class="separator">
+                  <td><strong>ATLAS (vision + time series)</strong></td>
+                  <td>18.5 ± 0.9</td>
+                  <td class="best">99.4 ± 0.1</td>
+                  <td class="best">0.06 ± 0.01</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="is-size-6" style="color: #555; margin-top: 0.5rem; text-align: center;">
+            <strong>Table I:</strong> Quantitative comparison of annotation performance across tools.
+            <strong>Bold</strong> = best result per metric.
+          </p>
+
+          <br>
+          <div class="notification is-info is-light" style="font-size: 105%; max-width: 820px; margin: 0 auto;">
+            <strong>Key takeaways:</strong>
+            <ul style="margin-top: 0.4rem;">
+              <li>ATLAS (vision-only) is the <strong>fastest</strong> at 11.0 ± 1.2 s/action — 44% faster than ELAN and 59% faster than ROSAnnotator.</li>
+              <li>Adding time-series data increases annotation time slightly (18.5 s), but yields a <strong>fivefold reduction</strong> in boundary error (0.06 s vs. 0.31 s) and near-expert alignment (99.4%).</li>
+              <li>ROSAnnotator's coarse whole-second timeline limits boundary precision, resulting in the lowest alignment score (85.1%).</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BIBTEX ===== -->
+  <section class="section">
+    <div class="container is-max-widescreen">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@inproceedings{stanovcic2026atlas,
+  title     = {{ATLAS: An Annotation Tool for Long-horizon Robotic Action Segmentation}},
+  author    = {Stanovcic, Sergej and Sliwowski, Daniel and Lee, Dongheui},
+  booktitle = {2026 IEEE International Symposium on Robot and Human Interactive Communication (ARSO)},
+  year      = {2026}
+}</code></pre>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+              href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+              Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            Website source code based on the <a href="https://nerfies.github.io/">Nerfies</a> project page.
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
